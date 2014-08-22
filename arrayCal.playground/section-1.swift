@@ -29,9 +29,9 @@ class   TipCalculator{
         for possibleTip in possibleTipsInferred{
             let intPct = Int(possibleTip*100)
             //3
-            retval[intPct] = calcTipWithTipPct(possibleTip)
+            ratval[intPct] = calcTipWithTipPct(possibleTip)
         }
-        return retval
+        return ratval
     }
 }
 
