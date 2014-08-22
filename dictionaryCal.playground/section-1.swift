@@ -13,7 +13,7 @@ class   TipCalculator{
     }
     
     //4
-    func    calcTipWithTipPct(tipPct:Double) -> Double{
+    func    calcTipWithTipsPct(tipPct:Double) -> Double{
         return  subtotal * tipPct
     }
     
@@ -29,7 +29,7 @@ class   TipCalculator{
         for possibleTip in possibleTipsInferred{
             let intPct = Int(possibleTip*100)
             //3
-            ratval[intPct] = calcTipWithTipPct(possibleTip)
+            ratval[intPct] = calcTipWithTipsPct(possibleTip)
         }
         return ratval
     }
