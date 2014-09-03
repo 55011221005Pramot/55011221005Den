@@ -12,23 +12,36 @@ class Animal{
         
     }
     
-    func AddNameFood() -> String{
-       
-        nameAnimal += name
-        foodType += food
-       
-        return name+"  "+food
-    }
-    func insertName(name:String){
+    func Add(let nameA:String,let foodN:String) {
+        nameAnimal += nameA
+        foodType += foodN
         
+        
+    }
+    func search(name:String)->String{
+        for(var i=0;i<nameAnimal.count;i++){
+            if(nameAnimal[i]==name){
+                var str = foodType[i]
+                return name+" eat "+str
+            }
+            else if(foodType[i]==name){
+                return name+" is food a "+nameAnimal[i]
+            }
+           
+        }
+        return "connot search"
         
     }
     
 
 }
 
-let test = Animal(name:"Cat",food:"Grass")
-test.AddNameFood()
+let test = Animal(name:"cat",food:"fish")
+test.Add("chicken",foodN: "rice")
+test.search("bird")
+test.search("Monkey")
+test.search("Corn")
+
 
 
 
