@@ -32,7 +32,9 @@ class Animal{
         return "connot search"
         
     }
-    
+    func remove(name:String){
+        
+    }
 
 }
 
