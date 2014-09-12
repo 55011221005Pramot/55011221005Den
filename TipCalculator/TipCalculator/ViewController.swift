@@ -14,27 +14,55 @@ class ViewController: UIViewController {
     @IBOutlet var taxPctLabel : UILabel!
     @IBOutlet var resultsText : UITextView!
   
-    @IBAction func calculateTapped(sender: AnyObject){}
-    @IBAction func taxPercen(sender: AnyObject){}
-    @IBAction func viewTapped(sender: AnyObject){}
+    @IBAction func calculateTapped(sender: AnyObject){
+        tipCalc.total = Double((totalTextfield.text as NSString).doubleValue)
+        
+        let possibleTips = tipCalc.returnPossibleTip()
+        var results = ""
+        for(tipPct,tipValue) in possibleTips{
+            results += "\(tipPct)%: \(tipValue)\n"
+            
+        }
+        resultsText.text = results
+       
+        
+       
+    
+    }
+    @IBAction func taxPercenChange(sender: AnyObject){
+    
+        tipCalc.taxPct = Double(taxPctSlider.value)/100.0
+        refeshUI()
+    }
+    @IBAction func viewTapped(sender: AnyObject){
+    
+        totalTextfield.resignFirstResponder()
+    
+    }
 
-    let tipCalc = TipCalculatorModel(total:33.33,taxpct:0.06)
+    let tipCalc = TipCalculatorModel(total:33.33,taxPct:0.06)
     func refeshUI(){
         //1
         totalTextfield.text = String(format:"%0.2f",tipCalc.total)
         //2
         taxPctSlider.value = Float(tipCalc.taxPct)*100.0
         //3
-        taxPctLabel.text="Tax Percentage(\(Int(taxPctSlider))%)"
+        taxPctLabel.text = "Tax Percentage(\(Int(taxPctSlider.value))%)"
         //4
-        resultsTextView.text=""
+        resultsText.text = ""
+       
     }
+    
+
+    
     
     
   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        refeshUI()
+    
     }
 
     override func didReceiveMemoryWarning() {        super.didReceiveMemoryWarning()
