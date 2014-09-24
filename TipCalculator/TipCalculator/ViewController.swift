@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         resultsText.text = results
        
         
-       
+        
     
     }
     @IBAction func taxPercenChange(sender: AnyObject){
