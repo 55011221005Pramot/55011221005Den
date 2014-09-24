@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  IOS8SwiftProtypeCellsTutorial
+//  Random
 //
 //  Created by student on 9/24/14.
 //  Copyright (c) 2014 student. All rights reserved.
@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController{
-    
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
