@@ -24,22 +24,24 @@ class TipCalculatorModel{
         
     }
     //4
-    func calcTipWithTipPct(tipPct:Double) -> Double{
+    func calcTipWithTipPct(tipPct:Double) -> (tipAmt:Double , total:Double){
+        let tipAmt = subtotal * tipPct
+        let finalTotal = total + tipAmt
         
-        return subtotal * tipPct
+        return (tipAmt, finalTotal)
     }
     //1
-    func returnPossibleTip() -> [Int: Double]{
+    func returnPossibleTip() -> [Int: (tipAmt:Double, total:Double)]{
         let possibleTipsInferred = [0.15, 0.18, 0.20]
         let possibleTipsExplicit:[Double] = [0.15, 0.18, 0.20]
        
-        
-        //2
-        var raval = Dictionary<Int, Double>()
+        var retval = Dictionary<Int, (tipAmt:Double, total:Double)>()
         for possibleTip in possibleTipsInferred{
             let intPct = Int(possibleTip*100)
+            retval[intPct] = calcTipWithTipPct(possibleTip)
+            
         }
-        return raval
+        return retval
         
         
     }

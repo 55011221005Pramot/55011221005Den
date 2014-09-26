@@ -16,6 +16,8 @@ class ViewController: UIViewController
     @IBOutlet var taxPctSlider : UISlider!
     @IBOutlet var taxPctLabel : UILabel!
     @IBOutlet var resultsText : UITextView!
+    @IBOutlet weak var tableView: UITableView!
+    
   
     @IBAction func calculateTapped(sender: AnyObject){
         tipCalc.total = Double((totalTextfield.text as NSString).doubleValue)
