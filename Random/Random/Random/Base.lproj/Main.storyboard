@@ -22,7 +22,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="one:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IUy-uZ-DUC"/>
+                                    <action selector="add1:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aE9-oM-fN2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C06-i6-RbG">
@@ -31,8 +31,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="one:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wP2-Yt-ifm"/>
-                                    <action selector="two:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BUc-rt-nhp"/>
+                                    <action selector="add2:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Zzx-AV-l1J"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWs-OD-2Fs">
@@ -41,16 +40,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="threee:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cfd-Cc-7eB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aK7-kO-2Ai">
-                                <rect key="frame" x="231" y="200" width="34" height="30"/>
-                                <state key="normal" title="reset">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="resetFunc:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dKw-wF-dLn"/>
+                                    <action selector="add3:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="n6A-cy-E1E"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qka-uP-ax0">
@@ -71,20 +61,26 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aK7-kO-2Ai">
+                                <rect key="frame" x="243" y="203" width="34" height="30"/>
+                                <state key="normal" title="reset">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetValue:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9fD-P0-nWG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="one" destination="Ly1-YJ-eAt" id="DB3-wS-D8G"/>
-                        <outlet property="oneButton" destination="Ly1-YJ-eAt" id="zX6-Ch-wy8"/>
-                        <outlet property="oneL" destination="qka-uP-ax0" id="2ll-wN-FiZ"/>
-                        <outlet property="reset" destination="aK7-kO-2Ai" id="PzP-JK-reC"/>
-                        <outlet property="three" destination="iJT-aj-Bcm" id="w5z-5W-p5i"/>
-                        <outlet property="tree" destination="iJT-aj-Bcm" id="qto-Tc-Ct3"/>
-                        <outlet property="treeL" destination="iJT-aj-Bcm" id="KIR-FU-9Qd"/>
-                        <outlet property="two" destination="vyj-4a-mMW" id="EGy-PO-zAW"/>
-                        <outlet property="twoButton" destination="C06-i6-RbG" id="PO2-Sn-uCL"/>
-                        <outlet property="twoL" destination="vyj-4a-mMW" id="ERU-nA-36i"/>
+                        <outlet property="oneL" destination="qka-uP-ax0" id="5n4-PJ-eMQ"/>
+                        <outlet property="oneTF" destination="Ly1-YJ-eAt" id="dqN-vO-ZeY"/>
+                        <outlet property="reset" destination="aK7-kO-2Ai" id="lAZ-1d-KWC"/>
+                        <outlet property="threeL" destination="iJT-aj-Bcm" id="UfN-Tu-0Hw"/>
+                        <outlet property="threeTF" destination="PWs-OD-2Fs" id="8zB-LV-rGU"/>
+                        <outlet property="twoL" destination="vyj-4a-mMW" id="I5S-Au-hMf"/>
+                        <outlet property="twoTF" destination="C06-i6-RbG" id="khd-Zu-yPJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
