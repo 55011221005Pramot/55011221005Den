@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AssetsLibrary
 
 class ViewController: UIViewController, UINavigationControllerDelegate,UIImagePickerControllerDelegate {
     
@@ -43,8 +44,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate,UIImagePi
         
         let cgimg = softwareContext.createCGImage(imageToSave, fromRect: imageToSave.extent())
         
-        let library = ALAssetsLibraryu()
-        library.wrieImageToSavedPhotosAlbum(cgimg,metadata:imageToSave.properties(),completionBlock: nil)
+       let library = ALAssetsLibrary()
+       library.writeImageToSavedPhotosAlbum(cgimg,metadata:imageToSave.properties(),completionBlock: nil)
     }
     
      func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: NSDictionary!) {
@@ -97,7 +98,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate,UIImagePi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       let fileUIL = NSBundle.mainBundle().URLForResource("image", withExtension: "png")
+       let fileUIL = NSBundle.mainBundle().URLForResource("images", withExtension: "jpeg")
         beginImage = CIImage(contentsOfURL: fileUIL)
         
         filter = CIFilter(name: "CISepiaTone" )
