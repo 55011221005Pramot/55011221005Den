@@ -20,15 +20,15 @@
                                 <rect key="frame" x="68" y="37" width="464" height="493"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="DUR-0Q-q2T"/>
-                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="3Mk-KR-Hgk"/>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="WQZ-rm-cTn"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="ad6-Fz-44B"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="view" destination="fs1-Gs-1kb" id="wjI-kH-Hl5"/>
+                        <outlet property="tableView" destination="fs1-Gs-1kb" id="ldT-xq-WVw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
