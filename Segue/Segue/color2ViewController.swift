@@ -23,18 +23,28 @@ class color2ViewController: UIViewController {
         
         
     }
-  
-    @IBOutlet var titleLable: UILabel!
+
     
     @IBAction func colorSelection(sender: UIButton) {
       colorLable.text = sender.titleLabel!.text!
+    
+        if(sender.titleLabel!.text! == "red"){
+            colorLable.backgroundColor = UIColor.redColor()
+        }
+        else if(sender.titleLabel!.text! == "green"){
+               colorLable.backgroundColor = UIColor.greenColor()
+        }
+        else if(sender.titleLabel!.text! == "yellow"){
+            colorLable.backgroundColor = UIColor.yellowColor()
+        }
+        else{ colorLable.backgroundColor = UIColor.whiteColor()     }
         
     }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        colorLable.text = colorString
+        colorLable.text = colorString  //อัพเดตค่า
         
         
     }

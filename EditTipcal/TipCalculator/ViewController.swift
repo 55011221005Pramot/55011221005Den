@@ -59,9 +59,9 @@ class ViewController: UIViewController
        
     }
     
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: NSIndexPath!) -> UITableViewCellAccessoryType {
-        <#code#>
-    }
+  /*  func tableView(tableView: UITableView!, numberOfRowsInSection section: NSIndexPath!) -> UITableViewCellAccessoryType {
+        code
+    }*/
     
     
     
