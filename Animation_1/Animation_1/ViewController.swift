@@ -27,15 +27,15 @@ class ViewController: UIViewController {
         coloredSquare.frame = CGRect(x: 0, y: 120, width: 50, height: 50)
         self.view.addSubview(coloredSquare)
         
-      //  let options = UIViewAnimationOptions.Autoreverse|UIViewAnimationOptions.Repeat|UIViewAnimationOptions.CurveEaseInOut
+       let options = UIViewAnimationOptions.Autoreverse|UIViewAnimationOptions.Repeat|UIViewAnimationOptions.CurveEaseInOut
         
-            let options = UIViewAnimationOptions.Repeat//เลื่อนขวา
+           // let options = UIViewAnimationOptions.Repeat//เลื่อนขวา
             //let options = UIViewAnimationOptions.Autoreverse//เลื่อนไปกลับ1รอบ
-            //let options = UIViewAnimationOptions.Autoreverse|UIViewAnimationOptions.Repeat|UIViewAnimationOptions.CurveEaseInOut//เลื่อนไปกลับเรื่อยๆ
+           // let options = UIViewAnimationOptions.Autoreverse|UIViewAnimationOptions.Repeat|UIViewAnimationOptions.CurveEaseInOut//เลื่อนไปกลับเรื่อยๆ
         
         UIView.animateWithDuration(1.0, delay:0.0,options:options,animations: {
             self.coloredSquare.backgroundColor = UIColor.redColor()
-            self.coloredSquare.frame = CGRect(x: 320-50, y: 220, width: 50, height: 50)
+            self.coloredSquare.frame = CGRect(x: 320-50, y: 120, width: 50, height: 50)
             },completion:nil)
         
         
