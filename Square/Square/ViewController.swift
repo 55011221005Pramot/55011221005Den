@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreMotion
 
 class ViewController: UIViewController, UICollisionBehaviorDelegate {
 
@@ -34,6 +35,8 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
         animator = UIDynamicAnimator(referenceView: view)
         gravity = UIGravityBehavior(items: [square])
         animator.addBehavior(gravity)
+        
+        
         
         
         collision = UICollisionBehavior(items: [square])
@@ -75,9 +78,9 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
         if(!firstContact){
             firstContact = true
             
-           // let square = UIView(frame: CGRect(x: 30, y: 0, width: 10, height: 10))
+            let square = UIView(frame: CGRect(x: 30, y: 0, width: 10, height: 10))
             
-            let square = UIView(frame: CGRect(x: self.view.frame.origin.x + self.square.frame.origin.x, y: self.view.frame.origin.y + self.square.frame.origin.y, width: 10, height: 10))
+//            let square = UIView(frame: CGRect(x: self.view.frame.origin.x + self.square.frame.origin.x, y: self.view.frame.origin.y + self.square.frame.origin.y, width: 10, height: 10))
             square.backgroundColor = getRandomColor()
             view.addSubview(square)
             

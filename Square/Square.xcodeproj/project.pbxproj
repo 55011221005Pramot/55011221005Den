@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F15A9BC1A1F3B6900B63DE1 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F15A9BB1A1F3B6900B63DE1 /* CoreMotion.framework */; };
 		3F4BACA31A0C9CA8004E1D9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4BACA21A0C9CA8004E1D9C /* AppDelegate.swift */; };
 		3F4BACA51A0C9CA8004E1D9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4BACA41A0C9CA8004E1D9C /* ViewController.swift */; };
 		3F4BACA81A0C9CA8004E1D9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4BACA61A0C9CA8004E1D9C /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F15A9BB1A1F3B6900B63DE1 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		3F4BAC9D1A0C9CA8004E1D9C /* Square.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Square.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4BACA11A0C9CA8004E1D9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F4BACA21A0C9CA8004E1D9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F15A9BC1A1F3B6900B63DE1 /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +62,7 @@
 		3F4BAC941A0C9CA8004E1D9C = {
 			isa = PBXGroup;
 			children = (
+				3F15A9BB1A1F3B6900B63DE1 /* CoreMotion.framework */,
 				3F4BAC9F1A0C9CA8004E1D9C /* Square */,
 				3F4BACB51A0C9CA8004E1D9C /* SquareTests */,
 				3F4BAC9E1A0C9CA8004E1D9C /* Products */,
@@ -405,6 +409,7 @@
 				3F4BACBE1A0C9CA8004E1D9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F4BACBF1A0C9CA8004E1D9C /* Build configuration list for PBXNativeTarget "SquareTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				3F4BACC11A0C9CA8004E1D9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

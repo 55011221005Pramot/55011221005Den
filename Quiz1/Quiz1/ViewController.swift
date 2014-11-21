@@ -46,6 +46,7 @@ class ViewController: UIViewController ,UICollisionBehaviorDelegate{
         collision.translatesReferenceBoundsIntoBoundary = false
         animator.addBehavior(collision)
         
+        
        
         
 
