@@ -24,10 +24,15 @@ class ViewController: UIViewController ,UITableViewDataSource{
         let saveAction = UIAlertAction(title: "Save", style: .Default) {(action: UIAlertAction!) -> Void in
             
         let textField = alert.textFields![0] as UITextField
+            
+        let textField2 = alert.textFields![1] as UITextField
+         let textField3 = alert.textFields![2] as UITextField
               println("++++++++++++++++++++tf")
            //self.items.append(textField.text)
             
         self.saveName(textField.text)
+        self.saveName(textField2.text)
+        self.saveName(textField3.text)
         self.tableView.reloadData()
            // println(textField.text)
             
@@ -84,6 +89,8 @@ class ViewController: UIViewController ,UITableViewDataSource{
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
+    
+    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell

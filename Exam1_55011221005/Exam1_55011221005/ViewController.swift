@@ -2,90 +2,83 @@
 //  ViewController.swift
 //  Exam1_55011221005
 //
-//  Created by Student on 10/10/14.
-//  Copyright (c) 2014 Student. All rights reserved.
+//  Created by student on 12/17/14.
+//  Copyright (c) 2014 Pramot. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController ,UITableViewDelegate{
-    let cellIdentifier = "cellIdentifier"
-    var tableData = ["Bus","Helicopter","Truck"]
-    
-    @IBOutlet var name: UITextField!
-    @IBOutlet var volume: UITextField!
-    @IBOutlet var price: UITextField!
-    
-    @IBOutlet var total: UIButton!
-    @IBOutlet var outputTotal: UITextField!
-    
-    @IBOutlet var profit: UIButton!
-    @IBOutlet var tableview: UITableView!
- 
-    @IBOutlet var reset: UIButton!
-    @IBAction func reset(sender: AnyObject) {
-        name.text = ""
-        volume.text = ""
-        price.text = ""
-        outputTotal.text = ""
-    }
+class ViewController: UIViewController ,UITableViewDataSource{
     
     
-    @IBAction func TotalFunc(sender: AnyObject) {
+    var items = [String]()
     
+    @IBOutlet weak var tabelView: UITableView!
+
+    @IBAction func addItem(sender: AnyObject) {
         
-    outputTotal.text = String("\(IntMax(Double((volume.text as NSString).doubleValue)*Double((price.text as NSString).doubleValue)))  Baht")
+        var alert = UIAlertController(title: "New Stocks", message: "Add name", preferredStyle: .Alert)
+        println("++++++++++++++++++++save")
+        
+        let saveAction = UIAlertAction(title: "Save", style: .Default) {(action: UIAlertAction!) -> Void in
+            
+            let textField = alert.textFields![0] as UITextField
+            let textField2 = alert.textFields![1] as UITextField
+            let textField3 = alert.textFields![2] as UITextField
+
+            println("++++++++++++++++++++tf")
+            self.items.append(textField.text)
+            self.items.append(textField2.text)
+            self.items.append(textField3.text)
+            
+            //self.saveName(textField.text)
+            self.tabelView.reloadData()
+            // println(textField.text)
+            
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Default){
+            (action: UIAlertAction!) -> Void in
+        }
+      
+        alert.addTextFieldWithConfigurationHandler { (textField: UITextField!) -> Void in
+            
+        }
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        
+        presentViewController(alert,
+            animated: true,
+            completion: nil)
+        
+
+        
         
     }
     
-    @IBAction func profit(sender: AnyObject) {
-        
-    }
     
-    
-    //*************
-    
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableData.count
+        return items.count
     }
     
-    
-func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+       
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell
         
-        var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier) as UITableViewCell
+        cell.textLabel!.text = items[indexPath.row]
         
-        cell.textLabel!.text = String("ราคาหุ้น3%: กำไร\(IntMax(Double((volume.text as NSString).doubleValue)*(Double((price.text as NSString).doubleValue))*3/100))   บาท")
         
-        var imageName = UIImage(named: tableData[indexPath.row])
-        
-        cell.imageView!.image = imageName
-        
+       //let item = items[indexPath.row]
+        //cell.textLabel!.text = Stocks.valueForKey("name") as String?
+     
         return cell
-        
-    }
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-    }
-    
-    func refeshUI(){
-        //1
-        volume.text = String(format:"%0.2f")
-        //2
-        price.text = String(format:"%0.2f")
-        
     }
 
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableview.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
-        
-        // Do any additional setup after loading the view, typically from a nib.
+       
+        title = "\"Stocks List\""
+        tabelView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
 
     override func didReceiveMemoryWarning() {

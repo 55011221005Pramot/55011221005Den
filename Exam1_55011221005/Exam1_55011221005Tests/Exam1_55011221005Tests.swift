@@ -2,8 +2,8 @@
 //  Exam1_55011221005Tests.swift
 //  Exam1_55011221005Tests
 //
-//  Created by Student on 10/10/14.
-//  Copyright (c) 2014 Student. All rights reserved.
+//  Created by student on 12/17/14.
+//  Copyright (c) 2014 Pramot. All rights reserved.
 //
 
 import UIKit
